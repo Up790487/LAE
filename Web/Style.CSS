@@ -1,0 +1,18 @@
+article, aside, details, figcaption, figure, footer, header, main, nav, section, summary
+		{display: block;
+		}
+
+
+
+body {
+    font-family: "Times New Roman",sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+    background-color: #fff;
+		background-image: url("Images/123.jpg");
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-position: center;
+    color: #000000;
+    margin: 0;
+}
