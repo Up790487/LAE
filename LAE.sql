@@ -6,7 +6,7 @@ Create databse LAE-dB;
     Establishment name Varchar(10) not null, 
     Description Varchar(10) not null, 
     Business Hours
-    Picture:
+    Picture jpg 
     Reviews 
     Longitude int(10) not null,
     Latitude int(10) not null
@@ -17,7 +17,7 @@ Create databse LAE-dB;
     Establishment name Varchar(10) not null, 
     Description Varchar(20) not null, 
     Business Hours
-    Picture:
+    Picture jpg
     Reviews
     Longitude int(10) not null,
     Latitude int(10) not null,
@@ -28,7 +28,7 @@ Create databse LAE-dB;
     Establishment name Varchar(10) not null, 
     Description Varchar(10) not null, 
     Business Hours
-    Picture:
+    Pictur jpg
     Reviews
     Longitude int(10) not null,
     Latitude int(10) not null,
@@ -39,7 +39,7 @@ Create databse LAE-dB;
     Establishment name Varchar(10) not null, 
     Description Varchar(10) not null, 
     Business Hours
-    Picture:
+    Picture jpg
     Reviews
     Longitude int(10) not null,
     Latitude int(10) not null,
@@ -49,7 +49,7 @@ Create databse LAE-dB;
     Establishment name Varchar(10) not null, 
     Description Varchar(10) not null, 
     Business Hours
-    Picture:
+    Picture jpg
     Reviews
     Longitude int(10) not null,
     Latitude int(10) not null,
@@ -59,7 +59,7 @@ Create databse LAE-dB;
     Establishment name Varchar(10) not null, 
     Description Varchar(10) not null, 
     Business Hours
-    Picture:
+    Picture jpg
     Reviews
     Longitude int(10) not null,
     Latitude int(10) not null,
@@ -69,7 +69,7 @@ Create databse LAE-dB;
     Establishment name Varchar(10) not null, 
     Description Varchar(10) not null, 
     Business Hours
-    Picture:
+    Picture jpg
     Reviews
     Longitude int(10) not null,
     Latitude int(10) not null,
@@ -79,7 +79,7 @@ Create databse LAE-dB;
     Establishment name Varchar(10) not null, 
     Description Varchar(10) not null, 
     Business Hours
-    Picture:
+    Picture jpg
     Reviews
     Longitude int(10) not null,
     Latitude int(10) not null,
@@ -89,7 +89,7 @@ Create databse LAE-dB;
     Establishment name Varchar(10) not null, 
     Description Varchar(10) not null, 
     Business Hours
-    Picture:
+    Picture jpg
     Reviews
     Longitude int(10) not null,
     Latitude int(10) not null,
