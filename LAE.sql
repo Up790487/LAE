@@ -7,7 +7,7 @@ Create databse LAE-dB;
     Description Varchar(40) not null, 
     Business Hours Time
     Picture jpg 
-    Reviews Varchar (100) not null
+    Reviews Varchar (100) not null,
     Longitude int(10) not null,
     Latitude int(10) not null
 
@@ -18,9 +18,9 @@ Create databse LAE-dB;
     Description Varchar(40) not null, 
     Business Hours Time
     Picture jpg
-    Reviews Varchar (100) not null
+    Reviews Varchar (100) not null,
     Longitude int(10) not null,
-    Latitude int(10) not null,
+    Latitude int(10) not null
   );
   
   create table Bar/Pubs (
@@ -29,9 +29,9 @@ Create databse LAE-dB;
     Description Varchar(40) not null, 
     Business Hours Time
     Pictur jpg
-    Reviews Varchar (100) not null
+    Reviews Varchar (100) not null,
     Longitude int(10) not null,
-    Latitude int(10) not null,
+    Latitude int(10) not null
   );
   
   create table Cinemas/Theatre (
@@ -40,9 +40,9 @@ Create databse LAE-dB;
     Description Varchar(40) not null, 
     Business Hours Time
     Picture jpg
-    Reviews Varchar (100) not null
+    Reviews Varchar (100) not null,
     Longitude int(10) not null,
-    Latitude int(10) not null,
+    Latitude int(10) not null
   );
   create table Museums (
      Sector 
@@ -50,9 +50,9 @@ Create databse LAE-dB;
     Description Varchar(40) not null, 
     Business Hours Time
     Picture jpg
-    Reviews Varchar (100) not null
+    Reviews Varchar (100) not null,
     Longitude int(10) not null,
-    Latitude int(10) not null,
+    Latitude int(10) not null
   );
   create table Sport (
      Sector 
@@ -60,7 +60,7 @@ Create databse LAE-dB;
     Description Varchar(40) not null, 
     Business Hours Time
     Picture jpg
-    Reviews Varchar (100) not null
+    Reviews Varchar (100) not null,
     Longitude int(10) not null,
     Latitude int(10) not null,
   );
@@ -72,7 +72,7 @@ Create databse LAE-dB;
     Picture jpg
     Reviews Varchar (100) not null
     Longitude int(10) not null,
-    Latitude int(10) not null,
+    Latitude int(10) not null
   );
   create table Landmarks/POI (
      Sector 
@@ -80,9 +80,9 @@ Create databse LAE-dB;
     Description Varchar(40) not null, 
     Business Hours Time
     Picture jpg
-    Reviews Varchar (100) not null
+    Reviews Varchar (100) not null,
     Longitude int(10) not null,
-    Latitude int(10) not null,
+    Latitude int(10) not null
   );
   create table Transport (
     Sector 
@@ -90,7 +90,7 @@ Create databse LAE-dB;
     Description Varchar(40) not null, 
     Business Hours Time
     Picture jpg
-    Reviews Varchar (100) not null
+    Reviews Varchar (100) not null,
     Longitude int(10) not null,
-    Latitude int(10) not null,
+    Latitude int(10) not null
   );
