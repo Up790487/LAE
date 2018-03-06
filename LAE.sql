@@ -2,7 +2,20 @@
 Create databse LAE-dB;
 
   create table Users (
-    id          INT PRIMARY KEY AUTO_INCREMENT
+    id          INT PRIMARY KEY AUTO_INCREMENT,
+
+  );
+
+  create table SelectEntertainment(
+    id
+
+  );
+
+  create table SearchEntertainment(
+    id
+  );
+
+  create table Rate(
 
   );
   create table Nightlife (
