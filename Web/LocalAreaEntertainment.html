@@ -24,7 +24,7 @@
       });
 
       //Array of Public Transport (currently only train stations) markers
-      var markers = [{
+      var PublicTransportMarkers = [{
           coords: {
             lat: 50.7965,
             lng: -1.0739
@@ -56,9 +56,9 @@
       ];
 
       //loop thorugh markers
-      for (var i = 0; i < markers.length; i++) {
+      for (var i = 0; i < PublicTransportMarkers.length; i++) {
         //add markers
-        addMarker(markers[i]);
+        addMarker(PublicTransportMarkers[i]);
       }
 
 
