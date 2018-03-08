@@ -19,13 +19,26 @@
         zoom: 12.7,
       };
       var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+
+      var marker = new google.maps.Marker({
+        position: myCenter
+      });
+
+      marker.setMap(map);
     }
   </script>
-  <div class= "Filter">Filter</div>
+
+
+  <div class="Filter">Filter</div>
 
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVmizlf3-dMb0QLJn02ayl7GJ16XsjV8g&callback=myMap">
   </script>
 
+  <!-- <script type="javascript" src="https://maps.googleapis.com/maps/api/place/nearbysearch/json?&location=50.805795,-1.072942&radius=200&type=Entertainment&keyword=portsmouth&key=AIzaSyCc3NFKpkFZqWGY5wWsSNIHbI2M_fwL0QU">
+  </script> -->
+
+  <!-- <script type="javascript" src="https://maps.googleapis.com/maps/api/place/textsearch/json?querybars+inPortsmouth&key=AIzaSyCc3NFKpkFZqWGY5wWsSNIHbI2M_fwL0Q">
+  </script> -->
 </body>
 
 </html>
