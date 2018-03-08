@@ -22,7 +22,13 @@
         zoom: 12.7,
         center: portsmouth
       });
-
+      var SportMarkers = [{
+        coords: {
+          lat: 50.7963,
+          lng: -1.0638
+        },
+        content: '<h2>Fratton Park</h2>'
+      }, ]
       //Array of Public Transport (currently only train stations) markers
       var PublicTransportMarkers = [{
           coords: {
@@ -51,17 +57,13 @@
             lng: -1.0907
           },
           content: '<h2>Portsmouth and Southsea Train station</h2>,<img  src=TrainStationSouthsea.jpg alt= "Picture of Portsmouth and Southsea Station">'
-
         },
       ];
-
-      //loop thorugh markers
+      //loop thorugh PublicTransportMarkers
       for (var i = 0; i < PublicTransportMarkers.length; i++) {
         //add markers
         addMarker(PublicTransportMarkers[i]);
       }
-
-
       //Adds Markers onto the map
       function addMarker(props) {
         var marker = new google.maps.Marker({
@@ -69,16 +71,23 @@
           map: map
         });
 
+        function loadSport(SportMarkers) {
+          clearMarkers();
+          for (var i = 0; i < SportMarkers.length; i++) {
+            //add markers
+            addMarker(SportMarkers[i]);
+          }
+        }
         //Checks to see if there is a desctipton for the land mark and creates an info window of the description
         if (props.content) {
           var infoWindow = new google.maps.InfoWindow({
             content: props.content
           });
-
           //checks to see if the infowindow should open by checking to see if the user has clicked on the pin on the map
           marker.addListener('click', function() {
             infoWindow.open(map, marker);
           });
+          //document.getElementById("sport").addEventListener("click", loadSport)
         }
       }
     }
@@ -86,6 +95,7 @@
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVmizlf3-dMb0QLJn02ayl7GJ16XsjV8g&callback=initMap">
   </script>
   <div class="Filter">Filter</div>
+  <!-- <button id="sport">Sport</button> -->
 </body>
 
 </html>
