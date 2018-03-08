@@ -3,7 +3,7 @@ article, aside, details, figcaption, figure, footer, header, main, nav, section,
 }
 
 #map {
-  height: 400px;
+  height: 700px;
   width: 100%;
 }
 
@@ -21,11 +21,11 @@ body {
 }
 
 h1 {
-  font-size: 30px;
+  font-size: 35px;
 }
 
 h2 {
-  font-size: 35px;
+  font-size: 30px;
 }
 
 h3 {
@@ -40,8 +40,8 @@ h3 {
 }
 
 img {
-  max-width: 100%;
-  height: auto;
+  max-width: 20em;
+  height: 20em;
 }
 
 .container {
@@ -75,7 +75,7 @@ h1 {
 }
 
 h2 {
-  font-family: "Comic Sans MS", Apple Chancery;
+  font-family: "Calibri";
   color: #101010;
   text-align: center;
 }
