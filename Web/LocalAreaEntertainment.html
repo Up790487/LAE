@@ -22,42 +22,53 @@
         zoom: 12.7,
         center: portsmouth
       });
-      //Creates a marker on the center of portsmouth and draws it onto the map
-      var marker = new google.maps.Marker({
-        position: portsmouth,
-        map: map,
-      });
 
-      // //Creates a new infowindow and what conetnt goes inside
-      // var infoWindow = new google.maps.InfoWindow({
-      //   content: '<p>Test</p>'
-      // });
-      //
-      // //checks to see if the infowindow should open by checking to see if the user has clicked on the pin on the map
-      // marker.addListener('click', function() {
-      //   infoWindow.open(map, marker);
-      // });
-      addMarker({
-        coords: {
-          lat: 50.7965,
-          lng: -1.0739
+      //Array of Public Transport (currently only train stations) markers
+      var markers = [{
+          coords: {
+            lat: 50.7965,
+            lng: -1.0739
+          },
+          content: '<h2>Fratton Train Station</h2>'
         },
-        content: '<h3>Fratton Train Station</h3>'
-      });
-      addMarker({
-        coords: {
-          lat: 50.7970,
-          lng: -1.1078
+        {
+          coords: {
+            lat: 50.7970,
+            lng: -1.1078
+          },
+          content: '<h2>Portsmouth Harbour Train Station</h2>'
         },
-        content: '<h3>Portsmouth Harbour Train Station</h3>'
-      });
+        {
+          coords: {
+            lat: 50.8283,
+            lng: -1.0587
+          },
+          content: '<h2>Hilsea Train station</h2>'
+        },
+        {
+          coords: {
+            lat: 50.7985,
+            lng: -1.0907
+          },
+          content: '<h2>Portsmouth and Southsea Train station</h2>'
+        },
+      ];
+
+      //loop thorugh markers
+      for (var i = 0; i < markers.length; i++) {
+        //add markers
+        addMarker(markers[i]);
+      }
 
 
+      //Adds Markers onto the map
       function addMarker(props) {
         var marker = new google.maps.Marker({
           position: props.coords,
           map: map
         });
+
+        //Checks to see if there is a desctipton for the land mark and creates an info window of the description
         if (props.content) {
           var infoWindow = new google.maps.InfoWindow({
             content: props.content
