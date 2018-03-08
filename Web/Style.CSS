@@ -1,175 +1,168 @@
-
-article, aside, details, figcaption, figure, footer, header, main, nav, section, summary
-		{display: block;
-		}
-
-
-
-body {
-    font-family: "Arial Black",sans-serif;
-    font-size: 50px;
-    line-height: 1.5;
-    background-color: #FFFFFF;
-		background-image:url("Web/images/map.jpg");
-		background-repeat: no-repeat;
-		background-attachment: fixed;
-		background-position: center;
-    color: #0733DB;
-    margin: 0;
+article, aside, details, figcaption, figure, footer, header, main, nav, section, summary {
+  display: block;
 }
 
+#map {
+  height: 400px;
+  width: 100%;
+}
+
+body {
+  font-family: "Arial Black", sans-serif;
+  font-size: 50px;
+  line-height: 1.5;
+  background-color: #FFFFFF;
+  background-image: url("Web/images/map.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  color: #0733DB;
+  margin: 0;
+}
 
 h1 {
-    font-size: 30px;
+  font-size: 30px;
 }
 
 h2 {
-    font-size: 35px;
+  font-size: 35px;
 }
 
 h3 {
-    font-size: 20px;
+  font-size: 20px;
 }
-
-
 
 .main-nav li {
-    list-style: none;
-    display: inline;
-    padding: 0 0.5em;
-    margin-left: 0;
+  list-style: none;
+  display: inline;
+  padding: 0 0.5em;
+  margin-left: 0;
 }
-
 
 img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
-
 
 .container {
-    width: 200%;
-    max-width: 850px;
-    margin: 0 auto;
+  width: 200%;
+  max-width: 850px;
+  margin: 0 auto;
 }
 
-
-.main-nav
-    {
-        padding: 10px 20px;
-        background-color: #000;
-    }
-.page-content
-    {
-        padding: 10px 20px;
-        background-color: #e9ece5;
-				text-align: center;
-    }
-.page-footer
-    {
-        padding: 10px 20px;
-        background-color: #000;
-        text-align: center;
-        color: #fff;
-    }
-
-h1 {font-family: "Lucida Handwriting", Apple Chancery;
-    text-align:center;
-    color: #D4AF61;
+.main-nav {
+  padding: 10px 20px;
+  background-color: #000;
 }
 
-h2 {font-family: "Comic Sans MS", Apple Chancery;
-    color: #101010;
-		text-align: center;
-
+.page-content {
+  padding: 10px 20px;
+  background-color: #e9ece5;
+  text-align: center;
 }
 
-h3 {font-family: "Lucida Handwriting", Apple Chancery;
-    color: #101010;
-		text-align: center;
+.page-footer {
+  padding: 10px 20px;
+  background-color: #000;
+  text-align: center;
+  color: #fff;
+}
 
+h1 {
+  font-family: "Lucida Handwriting", Apple Chancery;
+  text-align: center;
+  color: #D4AF61;
+}
+
+h2 {
+  font-family: "Comic Sans MS", Apple Chancery;
+  color: #101010;
+  text-align: center;
+}
+
+h3 {
+  font-family: "Lucida Handwriting", Apple Chancery;
+  color: #101010;
+  text-align: center;
 }
 
 .center-position {
-text-align: center;
-color: #000000;
-border: 9px solid #000000;
-
+  text-align: center;
+  color: #000000;
+  border: 9px solid #000000;
 }
-
 
 .img-display {
-display: pink;
-border: 80px solid black;
-margin-top: 100px;
-margin-bottom: 100%;
-margin-right: 100%;
-margin-left: 80px;
-background-color: lightblue;
-
+  display: pink;
+  border: 80px solid black;
+  margin-top: 100px;
+  margin-bottom: 100%;
+  margin-right: 100%;
+  margin-left: 80px;
+  background-color: lightblue;
 }
-
 
 p {
-	text-align: center;
-	color: #101010;
-	font-size: 18px;
+  text-align: center;
+  color: #101010;
+  font-size: 18px;
 }
-
 
 li {
-	text-align: left;
-	color: #101010;
-	font-size:18px;
-
-}
-#title{
-	text-align: center;
-}
-#sub-title{
-	text-align: center;
+  text-align: left;
+  color: #101010;
+  font-size: 18px;
 }
 
-.footer{
-
-	position: relative;
-	display: flex;
-	height: 40px;
-	width: 100%;
-	background-color: #3B3738;
-	text-align: center;
-	color: #efefef;
-	padding-top: 3em;
-	margin-top: 3em;
-
+#title {
+  text-align: center;
 }
 
-.footer a{
-	text-align: center;
+#sub-title {
+  text-align: center;
 }
+
+.footer {
+  position: relative;
+  display: flex;
+  height: 40px;
+  width: 100%;
+  background-color: #3B3738;
+  text-align: center;
+  color: #efefef;
+  padding-top: 3em;
+  margin-top: 3em;
+}
+
+.footer a {
+  text-align: center;
+}
+
 a:link {
-    color:#0033CC;
-}
-a:visited {
-    color:#000000;
-}
-a:hover {
-    color:#060998;
-}
-a:focus, a:active {
-    outline:thick dotted;
-    color:#0099FF;
+  color: #0033CC;
 }
 
-.main-nav{
-	text-align: center;
+a:visited {
+  color: #000000;
+}
+
+a:hover {
+  color: #060998;
+}
+
+a:focus, a:active {
+  outline: thick dotted;
+  color: #0099FF;
+}
+
+.main-nav {
+  text-align: center;
 }
 
 .main-nav a {
-        color:#cd78ff;
-
+  color: #cd78ff;
 }
 
-.main-nav a:visited,.page-footer a:visited {
-    color:#D4AF61;
+.main-nav a:visited, .page-footer a:visited {
+  color: #D4AF61;
 }
