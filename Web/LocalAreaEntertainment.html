@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <!doctype html>
 <html>
 
@@ -62,3 +63,106 @@
 
 </html>
 >>>>>>> 4697ced7bfb20a93613eba60552c9c5a98e17a88
+=======
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Local Area Entertainment(Portsmouth)</title>
+  <link href="Style.CSS" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <div class="container">Welcome To LAE Portsmouth</div>
+  <div id="map"></div>
+  <script>
+    function initMap() {
+      //sets the latitude and longitude for the centre of portsmouth
+      var portsmouth = {
+        lat: 50.806,
+        lng: -1.07
+      };
+      //Creates the map on the web page
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 12.7,
+        center: portsmouth
+      });
+      var SportMarkers = [{
+        coords: {
+          lat: 50.7963,
+          lng: -1.0638
+        },
+        content: '<h2>Fratton Park</h2>'
+      }, ]
+      //Array of Public Transport (currently only train stations) markers
+      var PublicTransportMarkers = [{
+          coords: {
+            lat: 50.7965,
+            lng: -1.0739
+          },
+          content: '<h2>Fratton Train Station</h2>'
+        },
+        {
+          coords: {
+            lat: 50.7970,
+            lng: -1.1078
+          },
+          content: '<h2>Portsmouth Harbour Train Station</h2>'
+        },
+        {
+          coords: {
+            lat: 50.8283,
+            lng: -1.0587
+          },
+          content: '<h2>Hilsea Train station</h2>'
+        },
+        {
+          coords: {
+            lat: 50.7985,
+            lng: -1.0907
+          },
+          content: '<h2>Portsmouth and Southsea Train station</h2>,<img  src=TrainStationSouthsea.jpg alt= "Picture of Portsmouth and Southsea Station">'
+        },
+      ];
+      //loop thorugh PublicTransportMarkers
+      for (var i = 0; i < PublicTransportMarkers.length; i++) {
+        //add markers
+        addMarker(PublicTransportMarkers[i]);
+      }
+      //Adds Markers onto the map
+      function addMarker(props) {
+        var marker = new google.maps.Marker({
+          position: props.coords,
+          map: map
+        });
+
+        function loadSport(SportMarkers) {
+          clearMarkers();
+          for (var i = 0; i < SportMarkers.length; i++) {
+            //add markers
+            addMarker(SportMarkers[i]);
+          }
+        }
+        //Checks to see if there is a desctipton for the land mark and creates an info window of the description
+        if (props.content) {
+          var infoWindow = new google.maps.InfoWindow({
+            content: props.content
+          });
+          //checks to see if the infowindow should open by checking to see if the user has clicked on the pin on the map
+          marker.addListener('click', function() {
+            infoWindow.open(map, marker);
+          });
+          //document.getElementById("sport").addEventListener("click", loadSport)
+        }
+      }
+    }
+  </script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVmizlf3-dMb0QLJn02ayl7GJ16XsjV8g&callback=initMap">
+  </script>
+  <div class="Filter">Filter</div>
+  <!-- <button id="sport">Sport</button> -->
+</body>
+
+</html>
+>>>>>>> b0dd08154fe931d395d8181b199cfd6a4b6e57c2
