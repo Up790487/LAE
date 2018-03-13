@@ -10,98 +10,134 @@
 <body>
   <div class="container">Welcome To LAE Portsmouth</div>
   <div id="map"></div>
+
   <script>
+    var map;
+    var markers = [];
+
+    var SportMarkers = [{
+      coords: {
+        lat: 50.7963,
+        lng: -1.0638
+      },
+      content: '<h2>Fratton Park</h2>',
+      label: 'S'
+    }, ];
+
+    //Array of Public Transport (currently only train stations) markers
+    var PublicTransportMarkers = [{
+        coords: {
+          lat: 50.7965,
+          lng: -1.0739
+        },
+        content: '<h2>Fratton Train Station</h2>',
+        label: 'T'
+      },
+      {
+        coords: {
+          lat: 50.7970,
+          lng: -1.1078
+        },
+        content: '<h2>Portsmouth Harbour Train Station</h2>',
+        label: 'T'
+      },
+      {
+        coords: {
+          lat: 50.8283,
+          lng: -1.0587
+        },
+        content: '<h2>Hilsea Train station</h2>',
+        label: 'T'
+      },
+      {
+        coords: {
+          lat: 50.7985,
+          lng: -1.0907
+        },
+        content: '<h2>Portsmouth and Southsea Train station</h2>,<img  src=TrainStationSouthsea.jpg alt= "Picture of Portsmouth and Southsea Station">',
+        label: 'T'
+      },
+    ];
+
+    function addMarker(props) {
+      var marker = new google.maps.Marker({
+        position: props.coords,
+        map: map,
+        label: props.label,
+        content: props.content
+      });
+      markers.push(marker);
+    }
+
+    // Sets the map on all markers in the array.
+    function setMapOnAll(map) {
+      for (var i = 0; i < markers.length; i++) {
+        markers[i].setMap(map);
+      }
+    }
+
+    //Clears markers from the map
+    function clearAllMarkers() {
+      setMapOnAll(null);
+    }
+
+    //Loads all of the sports venues stored in the array
+    function loadSport() {
+      clearAllMarkers();
+
+      for (var i = 0; i < SportMarkers.length; i++) {
+        //add markers
+        addMarker(SportMarkers[i]);
+      }
+    }
+    //Loads all of the Trainstations in the portsmouth area
+    function loadTransport() {
+      clearAllMarkers();
+
+      for (var i = 0; i < PublicTransportMarkers.length; i++) {
+        //add markers
+        addMarker(PublicTransportMarkers[i]);
+      }
+    }
+
     function initMap() {
+
+      document.getElementById("sport").addEventListener("click", loadSport);
+      document.getElementById("transport").addEventListener("click", loadTransport);
+
       //sets the latitude and longitude for the centre of portsmouth
       var portsmouth = {
         lat: 50.806,
         lng: -1.07
       };
+
       //Creates the map on the web page
-      var map = new google.maps.Map(document.getElementById('map'), {
+      map = new google.maps.Map(document.getElementById('map'), {
         zoom: 12.7,
         center: portsmouth
       });
-      var SportMarkers = [{
-        coords: {
-          lat: 50.7963,
-          lng: -1.0638
-        },
-        content: '<h2>Fratton Park</h2>',
-        label: 'S',
-      }, ]
-      //Array of Public Transport (currently only train stations) markers
-      var PublicTransportMarkers = [{
-          coords: {
-            lat: 50.7965,
-            lng: -1.0739
-          },
-          content: '<h2>Fratton Train Station</h2>',
-          label: 'T'
-        },
-        {
-          coords: {
-            lat: 50.7970,
-            lng: -1.1078
-          },
-          content: '<h2>Portsmouth Harbour Train Station</h2>',
-          label: 'T'
-        },
-        {
-          coords: {
-            lat: 50.8283,
-            lng: -1.0587
-          },
-          content: '<h2>Hilsea Train station</h2>',
-          label: 'T'
-        },
-        {
-          coords: {
-            lat: 50.7985,
-            lng: -1.0907
-          },
-          content: '<h2>Portsmouth and Southsea Train station</h2>,<img  src=TrainStationSouthsea.jpg alt= "Picture of Portsmouth and Southsea Station">',
-          label: 'T'
-        },
-      ];
-      //loop thorugh PublicTransportMarkers
-      for (var i = 0; i < PublicTransportMarkers.length; i++) {
-        //add markers
-        addMarker(PublicTransportMarkers[i]);
-      }
+
       //Adds Markers onto the map
-      function addMarker(props) {
-        var marker = new google.maps.Marker({
-          position: props.coords,
-          map: map,
-          label: props.label
+      //Checks to see if there is a desctipton for the land mark and creates an info window of the description
+      if (props.content) {
+        var infoWindow = new google.maps.InfoWindow({
+          content: props.content
         });
 
-        function loadSport(SportMarkers) {
-          //clearMarkers(PublicTransportMarkers);
-          for (var i = 0; i < SportMarkers.length; i++) {
-            //add markers
-            addMarker(SportMarkers[i]);
-          }
-        }
-        //Checks to see if there is a desctipton for the land mark and creates an info window of the description
-        if (props.content) {
-          var infoWindow = new google.maps.InfoWindow({
-            content: props.content
-          });
-          //checks to see if the infowindow should open by checking to see if the user has clicked on the pin on the map
-          marker.addListener('click', function() {
-            infoWindow.open(map, marker);
-          });
-          //document.getElementById("sport").addEventListener("click", loadSport(SportMarkers));
-        }
+        //checks to see if the infowindow should open by checking to see if the user has clicked on the pin on the map
+        marker.addListener('click', function() {
+          infoWindow.open(map, marker);
+        });
       }
     }
   </script>
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVmizlf3-dMb0QLJn02ayl7GJ16XsjV8g&libraries=places&callback=initMap">
-  </script>
+
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVmizlf3-dMb0QLJn02ayl7GJ16XsjV8g&libraries=places&callback=initMap"></script>
+
   <div class="Filter">Filter</div>
-  <button id="sport"> Sport</button>
+  <button id="sport">Sport</button>
+  <button id="transport">Transport</button>
+
 </body>
 
 </html>
