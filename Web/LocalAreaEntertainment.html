@@ -16,7 +16,7 @@
     var markers = [];
 
 
-
+    //Array of Sports Venue markers
     var SportMarkers = [{
       coords: {
         lat: 50.7963,
@@ -25,7 +25,7 @@
       content: '<h2>Fratton Park</h2>'
     }, ];
 
-    //Array of Public Transport (currently only train stations) markers
+    //Array of Public Transport Train station markers
     var PublicTransportMarkers = [{
         coords: {
           lat: 50.7965,
@@ -83,12 +83,12 @@
         markers[i].setMap(map);
       }
     }
-
+    //Removes markers from the map
     function clearAllMarkers() {
       setMapOnAll(null);
     }
 
-
+    //This function clears the map and then loads all of the sports markers from the SportMarkers array and places them on the map
     function loadSport() {
       clearAllMarkers();
 
@@ -97,7 +97,7 @@
         addMarker(SportMarkers[i]);
       }
     }
-
+    //This function clears the map and then loads all of the transport markers from the PublicTransportMarkers array and places them on the map
     function loadTransport() {
       clearAllMarkers();
 
@@ -132,7 +132,7 @@
         }
       }
     }
-
+    // Draws the map on the website and checks if any of the buttons have been clicked
     function initMap() {
 
       document.getElementById("sport").addEventListener("click", loadSport);
@@ -158,8 +158,11 @@
 
   <div class="Filter">Filter</div>
   <button id="sport">Sport</button>
+  <!--Creates a button for sport  -->
   <button id="transport">Transport</button>&nbsp;&nbsp;
+  <!--Creates a button for transport  -->
   <label>Search for: </label><input id="txtSearchTerm">&nbsp;&nbsp;<button id="search">Search</button>
+  <!--Creates a creates a search box  -->
 
 </body>
 
