@@ -22,7 +22,8 @@
         lat: 50.7963,
         lng: -1.0638
       },
-      content: '<h2>Fratton Park</h2>'
+      content: '<h2>Fratton Park</h2>',
+      label: 'S'
     }, ];
 
     //Array of Public Transport Train station markers
@@ -31,28 +32,32 @@
           lat: 50.7965,
           lng: -1.0739
         },
-        content: '<h2>Fratton Train Station</h2>'
+        content: '<h2>Fratton Train Station</h2>',
+        label: 'T'
       },
       {
         coords: {
           lat: 50.7970,
           lng: -1.1078
         },
-        content: '<h2>Portsmouth Harbour Train Station</h2>'
+        content: '<h2>Portsmouth Harbour Train Station</h2>',
+        label: 'T'
       },
       {
         coords: {
           lat: 50.8283,
           lng: -1.0587
         },
-        content: '<h2>Hilsea Train station</h2>'
+        content: '<h2>Hilsea Train station</h2>',
+        label: 'T'
       },
       {
         coords: {
           lat: 50.7985,
           lng: -1.0907
         },
-        content: '<h2>Portsmouth and Southsea Train station</h2>,<img  src=TrainStationSouthsea.jpg alt= "Picture of Portsmouth and Southsea Station">'
+        content: '<h2>Portsmouth and Southsea Train station</h2>,<img  src=TrainStationSouthsea.jpg alt= "Picture of Portsmouth and Southsea Station">',
+        label: 'T'
       },
     ];
 
@@ -60,7 +65,8 @@
     function addMarker(props) {
       var marker = new google.maps.Marker({
         position: props.coords,
-        map: map
+        map: map,
+        label: props.label
       });
       markers.push(marker);
 
