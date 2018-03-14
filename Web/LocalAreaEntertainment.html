@@ -15,13 +15,14 @@
     var map;
     var markers = [];
 
+
+
     var SportMarkers = [{
       coords: {
         lat: 50.7963,
         lng: -1.0638
       },
-      content: '<h2>Fratton Park</h2>',
-      label: 'S'
+      content: '<h2>Fratton Park</h2>'
     }, ];
 
     //Array of Public Transport (currently only train stations) markers
@@ -30,43 +31,50 @@
           lat: 50.7965,
           lng: -1.0739
         },
-        content: '<h2>Fratton Train Station</h2>',
-        label: 'T'
+        content: '<h2>Fratton Train Station</h2>'
       },
       {
         coords: {
           lat: 50.7970,
           lng: -1.1078
         },
-        content: '<h2>Portsmouth Harbour Train Station</h2>',
-        label: 'T'
+        content: '<h2>Portsmouth Harbour Train Station</h2>'
       },
       {
         coords: {
           lat: 50.8283,
           lng: -1.0587
         },
-        content: '<h2>Hilsea Train station</h2>',
-        label: 'T'
+        content: '<h2>Hilsea Train station</h2>'
       },
       {
         coords: {
           lat: 50.7985,
           lng: -1.0907
         },
-        content: '<h2>Portsmouth and Southsea Train station</h2>,<img  src=TrainStationSouthsea.jpg alt= "Picture of Portsmouth and Southsea Station">',
-        label: 'T'
+        content: '<h2>Portsmouth and Southsea Train station</h2>,<img  src=TrainStationSouthsea.jpg alt= "Picture of Portsmouth and Southsea Station">'
       },
     ];
 
+    //Adds Markers onto the map
     function addMarker(props) {
       var marker = new google.maps.Marker({
         position: props.coords,
-        map: map,
-        label: props.label,
-        content: props.content
+        map: map
       });
       markers.push(marker);
+
+      //Checks to see if there is a desctipton for the land mark and creates an info window of the description
+      if (props.content) {
+        var infoWindow = new google.maps.InfoWindow({
+          content: props.content
+        });
+        //checks to see if the infowindow should open by checking to see if the user has clicked on the pin on the map
+        marker.addListener('click', function() {
+          infoWindow.open(map, marker);
+        });
+        document.getElementById("sport").addEventListener("click", loadSport)
+      }
     }
 
     // Sets the map on all markers in the array.
@@ -76,12 +84,11 @@
       }
     }
 
-    //Clears markers from the map
     function clearAllMarkers() {
       setMapOnAll(null);
     }
 
-    //Loads all of the sports venues stored in the array
+
     function loadSport() {
       clearAllMarkers();
 
@@ -90,7 +97,7 @@
         addMarker(SportMarkers[i]);
       }
     }
-    //Loads all of the Trainstations in the portsmouth area
+
     function loadTransport() {
       clearAllMarkers();
 
@@ -100,10 +107,37 @@
       }
     }
 
+    function loadSearch() {
+
+      clearAllMarkers();
+
+      var searchBox = document.getElementById("txtSearchTerm");
+      if (searchBox != null) {
+        var searchTerm = searchBox.value.toLowerCase();
+      }
+
+      if (searchTerm != null) {
+        for (var i = 0; i < PublicTransportMarkers.length; i++) {
+          //add markers that match search
+          if (PublicTransportMarkers[i].content.toLowerCase().indexOf(searchTerm) != -1) {
+            addMarker(PublicTransportMarkers[i]);
+          }
+        }
+
+        for (var i = 0; i < SportMarkers.length; i++) {
+          //add markers that match search
+          if (SportMarkers[i].content.toLowerCase().indexOf(searchTerm) != -1) {
+            addMarker(SportMarkers[i]);
+          }
+        }
+      }
+    }
+
     function initMap() {
 
       document.getElementById("sport").addEventListener("click", loadSport);
       document.getElementById("transport").addEventListener("click", loadTransport);
+      document.getElementById("search").addEventListener("click", loadSearch);
 
       //sets the latitude and longitude for the centre of portsmouth
       var portsmouth = {
@@ -117,18 +151,6 @@
         center: portsmouth
       });
 
-      //Adds Markers onto the map
-      //Checks to see if there is a desctipton for the land mark and creates an info window of the description
-      if (props.content) {
-        var infoWindow = new google.maps.InfoWindow({
-          content: props.content
-        });
-
-        //checks to see if the infowindow should open by checking to see if the user has clicked on the pin on the map
-        marker.addListener('click', function() {
-          infoWindow.open(map, marker);
-        });
-      }
     }
   </script>
 
@@ -136,7 +158,8 @@
 
   <div class="Filter">Filter</div>
   <button id="sport">Sport</button>
-  <button id="transport">Transport</button>
+  <button id="transport">Transport</button>&nbsp;&nbsp;
+  <label>Search for: </label><input id="txtSearchTerm">&nbsp;&nbsp;<button id="search">Search</button>
 
 </body>
 
