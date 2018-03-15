@@ -65,7 +65,7 @@ Create databse LAE-dB;
     Latitude int(10) not null,
   );
   create table Parks (
-     Sector 
+    Sector 
     Establishment name Varchar(20) not null, 
     Description Varchar(40) not null, 
     Business Hours Time
@@ -75,7 +75,7 @@ Create databse LAE-dB;
     Latitude int(10) not null
   );
   create table Landmarks/POI (
-     Sector 
+    Sector 
     Establishment name Varchar(20) not null, 
     Description Varchar(40) not null, 
     Business Hours Time
