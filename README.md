@@ -5,7 +5,7 @@ LAE will be a simplified means to find points of interest around the city of Por
 -- 
 
 This is a Java EE application which is connected to MySQl database 
-Using MySql workbench -> Database user configuration: jdbc.username= portsuser 
+Upload the database ( LAE.sql) to MySql workbench  -> Database user configuration: jdbc.username= portsuser 
                                                       jdbc.password= P@$$w(0rd
                                                       
                                                    
