@@ -1,3 +1,4 @@
+-- Regarding webapp by using MySQL workbench but its not working --
 
 Create databse LAE-dB;
 
@@ -78,6 +79,8 @@ INSERT INTO `user` VALUES (1,'tourist','tourist123','Tourist Firstname','Tourist
 (4,'tourist2','tourist2','Tourist 2','Tourist','786798715','adeyemi@brilloconnetz.com','23 Southampton Road, Portsmouth Hampshire PO6 4SH',1);
 
 UNLOCK TABLES;
+
+-----------------------------------------------------------------------------------
 
 
   create table Nightlife (
