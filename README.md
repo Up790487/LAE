@@ -9,4 +9,4 @@ Upload the database ( LAE.sql) to MySql workbench  -> Database user configuratio
                                                       jdbc.password= P@$$w(0rd
                                                       
                                                    
-Using eclipse create dynamic web application 
+
