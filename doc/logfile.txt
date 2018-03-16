@@ -1,0 +1,367 @@
+Class documentation
+<---- javadoc command: ---->
+C:\Program Files (x86)\Java\jdk1.7.0_25\bin\javadoc.exe
+-author
+-version
+-nodeprecated
+-package
+-noindex
+-notree
+-nohelp
+-nonavbar
+-source
+1.7
+-classpath
+C:\Program Files (x86)\BlueJ\lib\bluejcore.jar;C:\Program Files (x86)\BlueJ\lib\junit-4.8.2.jar;E:\YEAR-2-2018\PortsmouthAttractions
+-d
+E:\YEAR-2-2018\PortsmouthAttractions\doc
+-encoding
+windows-1252
+-charset
+windows-1252
+-docletpath
+C:\Program Files (x86)\BlueJ\lib\bjdoclet.jar
+-doclet
+bluej.doclet.doclets.formats.html.HtmlDoclet
+E:\YEAR-2-2018\PortsmouthAttractions\PortsmouthAttractions\src\main\java\org\attraction\portsmouth\service\AttractionServiceImpl.java
+<---- end of javadoc command ---->
+Loading source file E:\YEAR-2-2018\PortsmouthAttractions\PortsmouthAttractions\src\main\java\org\attraction\portsmouth\service\AttractionServiceImpl.java...
+Constructing Javadoc information...
+E:\YEAR-2-2018\PortsmouthAttractions\PortsmouthAttractions\src\main\java\org\attraction\portsmouth\service\AttractionServiceImpl.java:7: error: package org.attraction.portsmouth.dao does not exist
+import org.attraction.portsmouth.dao.AttractionDAO;
+                                    ^
+E:\YEAR-2-2018\PortsmouthAttractions\PortsmouthAttractions\src\main\java\org\attraction\portsmouth\service\AttractionServiceImpl.java:8: error: package org.attraction.portsmouth.entity does not exist
+import org.attraction.portsmouth.entity.Attraction;
+                                       ^
+E:\YEAR-2-2018\PortsmouthAttractions\PortsmouthAttractions\src\main\java\org\attraction\portsmouth\service\AttractionServiceImpl.java:9: error: package org.springframework.beans.factory.annotation does not exist
+import org.springframework.beans.factory.annotation.Autowired;
+                                                   ^
+E:\YEAR-2-2018\PortsmouthAttractions\PortsmouthAttractions\src\main\java\org\attraction\portsmouth\service\AttractionServiceImpl.java:10: error: package org.springframework.dao does not exist
+import org.springframework.dao.DataIntegrityViolationException;
+                              ^
+E:\YEAR-2-2018\PortsmouthAttractions\PortsmouthAttractions\src\main\java\org\attraction\portsmouth\service\AttractionServiceImpl.java:11: error: package org.springframework.stereotype does not exist
+import org.springframework.stereotype.Service;
+                                     ^
+E:\YEAR-2-2018\PortsmouthAttractions\PortsmouthAttractions\src\main\java\org\attraction\portsmouth\service\AttractionServiceImpl.java:12: error: package org.springframework.transaction.annotation does not exist
+import org.springframework.transaction.annotation.Transactional;
+                                                 ^
+E:\YEAR-2-2018\PortsmouthAttractions\PortsmouthAttractions\src\main\java\org\attraction\portsmouth\service\AttractionService.java:5: error: package org.attraction.portsmouth.entity does not exist
+import org.attraction.portsmouth.entity.Attraction;
+                                       ^
+E:\YEAR-2-2018\PortsmouthAttractions\PortsmouthAttractions\src\main\java\org\attraction\portsmouth\service\AttractionServiceImpl.java:14: error: cannot find symbol
+@Service
+ ^
+  symbol: class Service
+E:\YEAR-2-2018\PortsmouthAttractions\PortsmouthAttractions\src\main\java\org\attraction\portsmouth\service\AttractionServiceImpl.java:17: error: cannot find symbol
+	private AttractionDAO attractionDao;
+	        ^
+  symbol:   class AttractionDAO
+  location: class AttractionServiceImpl
+E:\YEAR-2-2018\PortsmouthAttractions\PortsmouthAttractions\src\main\java\org\attraction\portsmouth\service\AttractionServiceImpl.java:20: error: cannot find symbol
+	public void addAttraction(Attraction attraction) {
+	                          ^
+  symbol:   class Attraction
+  location: class AttractionServiceImpl
+E:\YEAR-2-2018\PortsmouthAttractions\PortsmouthAttractions\src\main\java\org\attraction\portsmouth\service\AttractionServiceImpl.java:25: error: cannot find symbol
+	public List<Attraction> listAllAttraction() {
+	            ^
+  symbol:   class Attraction
+  location: class AttractionServiceImpl
+E:\YEAR-2-2018\PortsmouthAttractions\PortsmouthAttractions\src\main\java\org\attraction\portsmouth\service\AttractionServiceImpl.java:30: error: cannot find symbol
+	public List<Attraction> listAllAttraction(String username) {
+	            ^
+  symbol:   class Attraction
+  location: class AttractionServiceImpl
+E:\YEAR-2-2018\PortsmouthAttractions\PortsmouthAttractions\src\main\java\org\attraction\portsmouth\service\AttractionServiceImpl.java:47: error: cannot find symbol
+	public void updateAttraction(Attraction attraction) {
+	                             ^
+  symbol:   class Attraction
+  location: class AttractionServiceImpl
+E:\YEAR-2-2018\PortsmouthAttractions\PortsmouthAttractions\src\main\java\org\attraction\portsmouth\service\AttractionServiceImpl.java:53: error: cannot find symbol
+	public Attraction getAttractionById(Integer id) {
+	       ^
+  symbol:   class Attraction
+  location: class AttractionServiceImpl
+E:\YEAR-2-2018\PortsmouthAttractions\PortsmouthAttractions\src\main\java\org\attraction\portsmouth\service\AttractionServiceImpl.java:58: error: cannot find symbol
+	public List<Attraction> listAttractionBy(String searchValue, String filterValue) {
+	            ^
+  symbol:   class Attraction
+  location: class AttractionServiceImpl
+E:\YEAR-2-2018\PortsmouthAttractions\PortsmouthAttractions\src\main\java\org\attraction\portsmouth\service\AttractionService.java:8: error: cannot find symbol
+	public void addAttraction(Attraction attraction);
+	                          ^
+  symbol:   class Attraction
+  location: interface AttractionService
+E:\YEAR-2-2018\PortsmouthAttractions\PortsmouthAttractions\src\main\java\org\attraction\portsmouth\service\AttractionService.java:10: error: cannot find symbol
+	public List<Attraction> listAllAttraction();
+	            ^
+  symbol:   class Attraction
+  location: interface AttractionService
+E:\YEAR-2-2018\PortsmouthAttractions\PortsmouthAttractions\src\main\java\org\attraction\portsmouth\service\AttractionService.java:12: error: cannot find symbol
+	public List<Attraction> listAllAttraction(String username);
+	            ^
+  symbol:   class Attraction
+  location: interface AttractionService
+E:\YEAR-2-2018\PortsmouthAttractions\PortsmouthAttractions\src\main\java\org\attraction\portsmouth\service\AttractionService.java:15: error: cannot find symbol
+	public Attraction getAttractionById(Integer id);
+	       ^
+  symbol:   class Attraction
+  location: interface AttractionService
+E:\YEAR-2-2018\PortsmouthAttractions\PortsmouthAttractions\src\main\java\org\attraction\portsmouth\service\AttractionService.java:17: error: cannot find symbol
+	public void updateAttraction(Attraction attraction);
+	                             ^
+  symbol:   class Attraction
+  location: interface AttractionService
+E:\YEAR-2-2018\PortsmouthAttractions\PortsmouthAttractions\src\main\java\org\attraction\portsmouth\service\AttractionService.java:18: error: cannot find symbol
+	public List<Attraction> listAttractionBy(String searchValue,String filterValue);
+	            ^
+  symbol:   class Attraction
+  location: interface AttractionService
+E:\YEAR-2-2018\PortsmouthAttractions\PortsmouthAttractions\src\main\java\org\attraction\portsmouth\service\AttractionServiceImpl.java:16: error: cannot find symbol
+	@Autowired
+	 ^
+  symbol:   class Autowired
+  location: class AttractionServiceImpl
+E:\YEAR-2-2018\PortsmouthAttractions\PortsmouthAttractions\src\main\java\org\attraction\portsmouth\service\AttractionServiceImpl.java:19: error: cannot find symbol
+	@Transactional
+	 ^
+  symbol:   class Transactional
+  location: class AttractionServiceImpl
+E:\YEAR-2-2018\PortsmouthAttractions\PortsmouthAttractions\src\main\java\org\attraction\portsmouth\service\AttractionServiceImpl.java:24: error: cannot find symbol
+	@Transactional
+	 ^
+  symbol:   class Transactional
+  location: class AttractionServiceImpl
+E:\YEAR-2-2018\PortsmouthAttractions\PortsmouthAttractions\src\main\java\org\attraction\portsmouth\service\AttractionServiceImpl.java:29: error: cannot find symbol
+	@Transactional
+	 ^
+  symbol:   class Transactional
+  location: class AttractionServiceImpl
+E:\YEAR-2-2018\PortsmouthAttractions\PortsmouthAttractions\src\main\java\org\attraction\portsmouth\service\AttractionServiceImpl.java:40: error: cannot find symbol
+	@Transactional
+	 ^
+  symbol:   class Transactional
+  location: class AttractionServiceImpl
+E:\YEAR-2-2018\PortsmouthAttractions\PortsmouthAttractions\src\main\java\org\attraction\portsmouth\service\AttractionServiceImpl.java:46: error: cannot find symbol
+	@Transactional
+	 ^
+  symbol:   class Transactional
+  location: class AttractionServiceImpl
+E:\YEAR-2-2018\PortsmouthAttractions\PortsmouthAttractions\src\main\java\org\attraction\portsmouth\service\AttractionServiceImpl.java:52: error: cannot find symbol
+	@Transactional
+	 ^
+  symbol:   class Transactional
+  location: class AttractionServiceImpl
+E:\YEAR-2-2018\PortsmouthAttractions\PortsmouthAttractions\src\main\java\org\attraction\portsmouth\service\AttractionServiceImpl.java:57: error: cannot find symbol
+	@Transactional
+	 ^
+  symbol:   class Transactional
+  location: class AttractionServiceImpl
+Standard Doclet version 1.7.0_25
+Building tree for all the packages and classes...
+Generating E:\YEAR-2-2018\PortsmouthAttractions\doc\PortsmouthAttractions\src\main\java\org\attraction\portsmouth\service\AttractionServiceImpl.html...
+javadoc: warning - Class Service not found.
+javadoc: warning - Class Service not found.
+javadoc: warning - Class Service not found.
+javadoc: warning - Class Transactional not found.
+javadoc: warning - Class Service not found.
+javadoc: warning - Class Transactional not found.
+javadoc: warning - Class Service not found.
+javadoc: warning - Class Transactional not found.
+javadoc: warning - Class Service not found.
+javadoc: warning - Class Transactional not found.
+javadoc: warning - Class Service not found.
+javadoc: warning - Class Transactional not found.
+javadoc: warning - Class Service not found.
+javadoc: warning - Class Transactional not found.
+javadoc: warning - Class Service not found.
+javadoc: warning - Class Transactional not found.
+javadoc: warning - Class Service not found.
+javadoc: warning - Class Service not found.
+javadoc: warning - Class Transactional not found.
+javadoc: warning - Class Transactional not found.
+javadoc: warning - Class Service not found.
+javadoc: warning - Class Transactional not found.
+javadoc: warning - Class Transactional not found.
+javadoc: warning - Class Service not found.
+javadoc: warning - Class Transactional not found.
+javadoc: warning - Class Transactional not found.
+javadoc: warning - Class Service not found.
+javadoc: warning - Class Transactional not found.
+javadoc: warning - Class Transactional not found.
+javadoc: warning - Class Service not found.
+javadoc: warning - Class Transactional not found.
+javadoc: warning - Class Transactional not found.
+javadoc: warning - Class Service not found.
+javadoc: warning - Class Transactional not found.
+javadoc: warning - Class Transactional not found.
+javadoc: warning - Class Service not found.
+javadoc: warning - Class Transactional not found.
+javadoc: warning - Class Transactional not found.
+javadoc: warning - Class Service not found.
+Generating E:\YEAR-2-2018\PortsmouthAttractions\doc\PortsmouthAttractions\src\main\java\org\attraction\portsmouth\service\package-frame.html...
+Generating E:\YEAR-2-2018\PortsmouthAttractions\doc\PortsmouthAttractions\src\main\java\org\attraction\portsmouth\service\package-summary.html...
+javadoc: warning - Class Service not found.
+Generating E:\YEAR-2-2018\PortsmouthAttractions\doc\constant-values.html...
+E:\YEAR-2-2018\PortsmouthAttractions\PortsmouthAttractions\src\main\java\org\attraction\portsmouth\service\UserServiceImpl.java:5: error: package org.attraction.portsmouth.dao does not exist
+import org.attraction.portsmouth.dao.UserDAO;
+                                    ^
+E:\YEAR-2-2018\PortsmouthAttractions\PortsmouthAttractions\src\main\java\org\attraction\portsmouth\service\UserServiceImpl.java:6: error: package org.attraction.portsmouth.entity does not exist
+import org.attraction.portsmouth.entity.User;
+                                       ^
+E:\YEAR-2-2018\PortsmouthAttractions\PortsmouthAttractions\src\main\java\org\attraction\portsmouth\service\UserServiceImpl.java:7: error: package org.springframework.beans.factory.annotation does not exist
+import org.springframework.beans.factory.annotation.Autowired;
+                                                   ^
+E:\YEAR-2-2018\PortsmouthAttractions\PortsmouthAttractions\src\main\java\org\attraction\portsmouth\service\UserServiceImpl.java:8: error: package org.springframework.dao does not exist
+import org.springframework.dao.DataIntegrityViolationException;
+                              ^
+E:\YEAR-2-2018\PortsmouthAttractions\PortsmouthAttractions\src\main\java\org\attraction\portsmouth\service\UserServiceImpl.java:9: error: package org.springframework.stereotype does not exist
+import org.springframework.stereotype.Service;
+                                     ^
+E:\YEAR-2-2018\PortsmouthAttractions\PortsmouthAttractions\src\main\java\org\attraction\portsmouth\service\UserServiceImpl.java:10: error: package org.springframework.transaction.annotation does not exist
+import org.springframework.transaction.annotation.Transactional;
+                                                 ^
+E:\YEAR-2-2018\PortsmouthAttractions\PortsmouthAttractions\src\main\java\org\attraction\portsmouth\service\UserService.java:5: error: package org.attraction.portsmouth.entity does not exist
+import org.attraction.portsmouth.entity.User;
+                                       ^
+E:\YEAR-2-2018\PortsmouthAttractions\PortsmouthAttractions\src\main\java\org\attraction\portsmouth\service\UserServiceImpl.java:12: error: cannot find symbol
+@Service
+ ^
+  symbol: class Service
+E:\YEAR-2-2018\PortsmouthAttractions\PortsmouthAttractions\src\main\java\org\attraction\portsmouth\service\UserServiceImpl.java:15: error: cannot find symbol
+	private UserDAO userDao;
+	        ^
+  symbol:   class UserDAO
+  location: class UserServiceImpl
+E:\YEAR-2-2018\PortsmouthAttractions\PortsmouthAttractions\src\main\java\org\attraction\portsmouth\service\UserServiceImpl.java:18: error: cannot find symbol
+	public User getUser(String username) {
+	       ^
+  symbol:   class User
+  location: class UserServiceImpl
+E:\YEAR-2-2018\PortsmouthAttractions\PortsmouthAttractions\src\main\java\org\attraction\portsmouth\service\UserServiceImpl.java:29: error: cannot find symbol
+	public User getUser(String firstname, String lastname) {
+	       ^
+  symbol:   class User
+  location: class UserServiceImpl
+E:\YEAR-2-2018\PortsmouthAttractions\PortsmouthAttractions\src\main\java\org\attraction\portsmouth\service\UserServiceImpl.java:34: error: cannot find symbol
+	public void addUser(User user) {
+	                    ^
+  symbol:   class User
+  location: class UserServiceImpl
+E:\YEAR-2-2018\PortsmouthAttractions\PortsmouthAttractions\src\main\java\org\attraction\portsmouth\service\UserService.java:8: error: cannot find symbol
+	public User getUser(String username);
+	       ^
+  symbol:   class User
+  location: interface UserService
+E:\YEAR-2-2018\PortsmouthAttractions\PortsmouthAttractions\src\main\java\org\attraction\portsmouth\service\UserService.java:10: error: cannot find symbol
+	public User getUser(String firstname, String lastname);
+	       ^
+  symbol:   class User
+  location: interface UserService
+E:\YEAR-2-2018\PortsmouthAttractions\PortsmouthAttractions\src\main\java\org\attraction\portsmouth\service\UserService.java:12: error: cannot find symbol
+	public void addUser(User user);
+	                    ^
+  symbol:   class User
+  location: interface UserService
+E:\YEAR-2-2018\PortsmouthAttractions\PortsmouthAttractions\src\main\java\org\attraction\portsmouth\service\UserServiceImpl.java:14: error: cannot find symbol
+	@Autowired
+	 ^
+  symbol:   class Autowired
+  location: class UserServiceImpl
+E:\YEAR-2-2018\PortsmouthAttractions\PortsmouthAttractions\src\main\java\org\attraction\portsmouth\service\UserServiceImpl.java:17: error: cannot find symbol
+	@Transactional
+	 ^
+  symbol:   class Transactional
+  location: class UserServiceImpl
+E:\YEAR-2-2018\PortsmouthAttractions\PortsmouthAttractions\src\main\java\org\attraction\portsmouth\service\UserServiceImpl.java:22: error: cannot find symbol
+	@Transactional
+	 ^
+  symbol:   class Transactional
+  location: class UserServiceImpl
+E:\YEAR-2-2018\PortsmouthAttractions\PortsmouthAttractions\src\main\java\org\attraction\portsmouth\service\UserServiceImpl.java:28: error: cannot find symbol
+	@Transactional
+	 ^
+  symbol:   class Transactional
+  location: class UserServiceImpl
+E:\YEAR-2-2018\PortsmouthAttractions\PortsmouthAttractions\src\main\java\org\attraction\portsmouth\service\UserServiceImpl.java:33: error: cannot find symbol
+	@Transactional
+	 ^
+  symbol:   class Transactional
+  location: class UserServiceImpl
+E:\YEAR-2-2018\PortsmouthAttractions\PortsmouthAttractions\src\main\java\org\attraction\portsmouth\service\RoleServiceImpl.java:5: error: package org.attraction.portsmouth.dao does not exist
+import org.attraction.portsmouth.dao.RoleDAO;
+                                    ^
+E:\YEAR-2-2018\PortsmouthAttractions\PortsmouthAttractions\src\main\java\org\attraction\portsmouth\service\RoleServiceImpl.java:6: error: package org.attraction.portsmouth.dao does not exist
+import org.attraction.portsmouth.dao.UserDAO;
+                                    ^
+E:\YEAR-2-2018\PortsmouthAttractions\PortsmouthAttractions\src\main\java\org\attraction\portsmouth\service\RoleServiceImpl.java:7: error: package org.attraction.portsmouth.entity does not exist
+import org.attraction.portsmouth.entity.User;
+                                       ^
+E:\YEAR-2-2018\PortsmouthAttractions\PortsmouthAttractions\src\main\java\org\attraction\portsmouth\service\RoleServiceImpl.java:8: error: package org.springframework.beans.factory.annotation does not exist
+import org.springframework.beans.factory.annotation.Autowired;
+                                                   ^
+E:\YEAR-2-2018\PortsmouthAttractions\PortsmouthAttractions\src\main\java\org\attraction\portsmouth\service\RoleServiceImpl.java:9: error: package org.springframework.dao does not exist
+import org.springframework.dao.DataIntegrityViolationException;
+                              ^
+E:\YEAR-2-2018\PortsmouthAttractions\PortsmouthAttractions\src\main\java\org\attraction\portsmouth\service\RoleServiceImpl.java:10: error: package org.springframework.stereotype does not exist
+import org.springframework.stereotype.Service;
+                                     ^
+E:\YEAR-2-2018\PortsmouthAttractions\PortsmouthAttractions\src\main\java\org\attraction\portsmouth\service\RoleServiceImpl.java:11: error: package org.springframework.transaction.annotation does not exist
+import org.springframework.transaction.annotation.Transactional;
+                                                 ^
+E:\YEAR-2-2018\PortsmouthAttractions\PortsmouthAttractions\src\main\java\org\attraction\portsmouth\service\RoleService.java:5: error: package org.attraction.portsmouth.entity does not exist
+import org.attraction.portsmouth.entity.User;
+                                       ^
+E:\YEAR-2-2018\PortsmouthAttractions\PortsmouthAttractions\src\main\java\org\attraction\portsmouth\service\RoleServiceImpl.java:13: error: cannot find symbol
+@Service
+ ^
+  symbol: class Service
+E:\YEAR-2-2018\PortsmouthAttractions\PortsmouthAttractions\src\main\java\org\attraction\portsmouth\service\RoleServiceImpl.java:16: error: cannot find symbol
+	private RoleDAO roleDao;
+	        ^
+  symbol:   class RoleDAO
+  location: class RoleServiceImpl
+E:\YEAR-2-2018\PortsmouthAttractions\PortsmouthAttractions\src\main\java\org\attraction\portsmouth\service\RoleServiceImpl.java:15: error: cannot find symbol
+	@Autowired
+	 ^
+  symbol:   class Autowired
+  location: class RoleServiceImpl
+E:\YEAR-2-2018\PortsmouthAttractions\PortsmouthAttractions\src\main\java\org\attraction\portsmouth\service\RoleServiceImpl.java:18: error: cannot find symbol
+	@Transactional
+	 ^
+  symbol:   class Transactional
+  location: class RoleServiceImpl
+E:\YEAR-2-2018\PortsmouthAttractions\PortsmouthAttractions\src\main\java\org\attraction\portsmouth\service\EMailingService.java:3: error: package org.springframework.beans.factory.annotation does not exist
+import org.springframework.beans.factory.annotation.Autowired;
+                                                   ^
+E:\YEAR-2-2018\PortsmouthAttractions\PortsmouthAttractions\src\main\java\org\attraction\portsmouth\service\EMailingService.java:4: error: package org.springframework.mail does not exist
+import org.springframework.mail.MailSender;
+                               ^
+E:\YEAR-2-2018\PortsmouthAttractions\PortsmouthAttractions\src\main\java\org\attraction\portsmouth\service\EMailingService.java:5: error: package org.springframework.mail does not exist
+import org.springframework.mail.SimpleMailMessage;
+                               ^
+E:\YEAR-2-2018\PortsmouthAttractions\PortsmouthAttractions\src\main\java\org\attraction\portsmouth\service\EMailingService.java:6: error: package org.springframework.stereotype does not exist
+import org.springframework.stereotype.Service;
+                                     ^
+E:\YEAR-2-2018\PortsmouthAttractions\PortsmouthAttractions\src\main\java\org\attraction\portsmouth\service\EMailingService.java:8: error: cannot find symbol
+@Service
+ ^
+  symbol: class Service
+E:\YEAR-2-2018\PortsmouthAttractions\PortsmouthAttractions\src\main\java\org\attraction\portsmouth\service\EMailingService.java:11: error: cannot find symbol
+	private MailSender mail;
+	        ^
+  symbol:   class MailSender
+  location: class EMailingService
+E:\YEAR-2-2018\PortsmouthAttractions\PortsmouthAttractions\src\main\java\org\attraction\portsmouth\service\EMailingService.java:10: error: cannot find symbol
+	@Autowired
+	 ^
+  symbol:   class Autowired
+  location: class EMailingService
+Building index for all the packages and classes...
+Building index for all classes...
+Generating E:\YEAR-2-2018\PortsmouthAttractions\doc\allclasses-frame.html...
+Generating E:\YEAR-2-2018\PortsmouthAttractions\doc\allclasses-noframe.html...
+Generating E:\YEAR-2-2018\PortsmouthAttractions\doc\index.html...
+Generating E:\YEAR-2-2018\PortsmouthAttractions\doc\stylesheet.css...
+39 errors
+69 warnings
