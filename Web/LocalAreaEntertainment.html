@@ -14,7 +14,16 @@
   <script>
     var map;
     var markers = [];
-
+    
+    //Array for Gunwharf Quays
+    var GunwharfMarkers = [{
+       coords: {
+         lat: 50.7951,
+         lng: -1.1058
+       },
+       content: '<h2>Gunwharf Quays</h2>',
+       label: 'G'
+     }, ];
 
     //Array of Sports Venue markers
     var SportMarkers = [{
@@ -112,6 +121,15 @@
         addMarker(PublicTransportMarkers[i]);
       }
     }
+    
+      function loadGunwharf() {
+       clearAllMarkers();
+    
+       for (var i = 0; i < BarMarkers.length; i++) {
+         //add markers
+         addMarker(GunwharfMarkers[i]);
+       }
+     }
     // This function checks the input inside the search box once entered and loads the closet match to the search, if the search doesnt meet any requirements then all locations are loaded
     function loadSearch() {
 
@@ -136,6 +154,12 @@
             addMarker(SportMarkers[i]);
           }
         }
+         for (var i = 0; i < GunwharfMarkers.length; i++) {
+         //add markers that match search
+           if (GunwharfMarkers[i].content.toLowerCase().indexOf(searchTerm) != -1) {
+            addMarker(GunwharfMarkers[i]);
+          }
+         }
       }
     }
     // Draws the map on the website and checks if any of the buttons have been clicked
@@ -143,6 +167,7 @@
 
       document.getElementById("sport").addEventListener("click", loadSport);
       document.getElementById("transport").addEventListener("click", loadTransport);
+      document.getElementById("gunwahrf").addEventListener("click", loadGunwharf);
       document.getElementById("search").addEventListener("click", loadSearch);
 
       //sets the latitude and longitude for the centre of portsmouth
@@ -165,13 +190,15 @@
   <div class="Filter">Filter</div>
   <button id="sport">Sport</button>
   <!--Creates a button for sport  -->
-  <button id="transport">Transport</button>&nbsp;&nbsp;
+  <button id="transport">Transport</button>
   <!--Creates a button for transport  -->
+  <button id="gunwahrf">Gunwharf Quays</button>&nbsp;&nbsp;
   <label>Search for: </label><input id="txtSearchTerm">&nbsp;&nbsp;<button id="search">Search</button>
   <!--Creates a creates a search box  -->
   <div class="Key">Key
     <p>S = Sport</p>
     <p>T = Transport</p>
+    <p>G = Gunwahrf Quays</p>
   </div>
 </body>
 
